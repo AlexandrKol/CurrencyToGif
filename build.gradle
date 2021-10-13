@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+mainClassName = 'com.example.currency_to_gif.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation     'org.springframework.boot:spring-boot-starter-parent:2.1.1.RELEASE'
+    implementation     'org.springframework.boot:spring-boot-starter-web:2.1.1.RELEASE'
+    implementation     'org.springframework.boot:spring-boot-maven-plugin:2.1.1.RELEASE'
+    implementation     'org.springframework.cloud:spring-cloud-starter-openfeign:2.1.1.RELEASE'
+    implementation     'org.springframework.cloud:spring-cloud-starter-hystrix:1.4.7.RELEASE'
+    
+    implementation     'io.github.openfeign:feign-core:10.11'
+
+    
+    implementation     'io.github.openfeign:feign-okhttp:10.11'
+    implementation     'io.github.openfeign:feign-gson:10.11'
+    implementation     'io.github.openfeign:feign-slf4j:10.11'
+    implementation     'io.github.openfeign:feign-ribbon:10.11'
+}
